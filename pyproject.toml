@@ -7,6 +7,7 @@ requires-python = ">=3.11"
 license = { text = "MIT" }
 keywords = ["japan-post", "tracking", "yu-pack"]
 classifiers = [
+    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -33,6 +34,7 @@ packages = ["japanpost_track"]
 [tool.hatch.build.targets.sdist]
 include = [
     "/japanpost_track",
+    "/LICENSE",
     "/README.md",
     "/pyproject.toml",
 ]
