@@ -1,0 +1,38 @@
+[project]
+name = "japanpost-track"
+version = "0.1.0"
+description = "日本郵便ゆうパック追跡（ブラウザ風ヘッダ）"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+keywords = ["japan-post", "tracking", "yu-pack"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Internet :: WWW/HTTP",
+]
+dependencies = [
+    "beautifulsoup4>=4.12",
+    "lxml>=5.3",
+    "requests>=2.32",
+]
+
+[project.scripts]
+jp-track = "japanpost_track.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["japanpost_track"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/japanpost_track",
+    "/README.md",
+    "/pyproject.toml",
+]
